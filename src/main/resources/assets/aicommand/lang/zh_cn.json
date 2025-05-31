@@ -1,0 +1,32 @@
+{
+
+  "key.categories.aicommand": "AI指令",
+  "key.aicommand.open_gui": "打开AI指令界面",
+  "screen.aicommand.title": "AI指令生成器",
+
+  "gui.aicommand.show_config": "显示配置",
+  "gui.aicommand.hide_config": "隐藏配置",
+  "gui.aicommand.ai_provider": "AI服务商:",
+  "gui.aicommand.api_key": "API密钥：",
+  "gui.aicommand.save_api_key": "保存API密钥",
+  "gui.aicommand.api_key_updated": "API密钥更新成功！",
+  "gui.aicommand.describe_input": "描述你想要的：",
+  "gui.aicommand.input": "输入",
+  "gui.aicommand.example_input": "给我一把钻石剑",
+  "gui.aicommand.generate_command": "生成指令",
+  "gui.aicommand.execute_commands": "执行指令",
+  "gui.aicommand.clear": "清除",
+  "gui.aicommand.close": "关闭",
+  "gui.aicommand.enter_description": "请输入描述！",
+  "gui.aicommand.generating_for": "正在为以下内容生成指令：%s",
+  "gui.aicommand.please_wait": "请稍候...",
+  "gui.aicommand.generated_commands": "✅ 已生成指令：",
+  "gui.aicommand.error": "错误：%s",
+  "gui.aicommand.no_commands": "没有可执行的指令！",
+  "gui.aicommand.no_player": "未找到玩家！",
+  "gui.aicommand.executing_commands": "正在执行 %s 条指令：",
+  "gui.aicommand.executed": "已执行：%s",
+  "gui.aicommand.failed_execute": "执行失败：%s",
+  "gui.aicommand.api_key_required": "需要配置 %s API密钥！",
+  "gui.aicommand.please_configure_api_key": "请在上方设置中配置您的API密钥。"
+}

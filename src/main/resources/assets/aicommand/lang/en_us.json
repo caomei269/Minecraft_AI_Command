@@ -1,0 +1,32 @@
+{
+
+  "key.categories.aicommand": "AI Command",
+  "key.aicommand.open_gui": "Open AI Command GUI",
+  "screen.aicommand.title": "AI Command Generator",
+
+  "gui.aicommand.show_config": "Show Config",
+  "gui.aicommand.hide_config": "Hide Config",
+  "gui.aicommand.ai_provider": "AI Provider:",
+  "gui.aicommand.api_key": "API Key:",
+  "gui.aicommand.save_api_key": "Save API Key",
+  "gui.aicommand.api_key_updated": "API Key updated successfully!",
+  "gui.aicommand.describe_input": "Describe what you want:",
+  "gui.aicommand.input": "Input",
+  "gui.aicommand.example_input": "Give me a diamond sword",
+  "gui.aicommand.generate_command": "Generate Command",
+  "gui.aicommand.execute_commands": "Execute Commands",
+  "gui.aicommand.clear": "Clear",
+  "gui.aicommand.close": "Close",
+  "gui.aicommand.enter_description": "Please enter a description!",
+  "gui.aicommand.generating_for": "Generating command for: %s",
+  "gui.aicommand.please_wait": "Please wait...",
+  "gui.aicommand.generated_commands": "✅ Generated command(s):",
+  "gui.aicommand.error": "Error: %s",
+  "gui.aicommand.no_commands": "No commands to execute!",
+  "gui.aicommand.no_player": "No player found!",
+  "gui.aicommand.executing_commands": "Executing %s command(s):",
+  "gui.aicommand.executed": "Executed: %s",
+  "gui.aicommand.failed_execute": "Failed to execute: %s",
+  "gui.aicommand.api_key_required": "%s API key is required!",
+  "gui.aicommand.please_configure_api_key": "Please configure your API key in the settings above."
+}

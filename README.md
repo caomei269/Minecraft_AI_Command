@@ -1,0 +1,44 @@
+# AI Command Mod
+
+A Minecraft Forge mod that integrates AI capabilities into the game.
+
+## Features
+
+- AI-powered command interface
+- Integration with DeepSeek and OpenAI APIs
+- Custom keybindings for AI interactions
+- In-game AI command screen
+
+## Requirements
+
+- Minecraft 1.21.5
+- Minecraft Forge 55.0.21+
+- Java 21
+
+## Installation
+
+1. Download the latest release from the releases page
+2. Place the .jar file in your Minecraft mods folder
+3. Launch Minecraft with Forge
+
+## Development
+
+### Building
+
+```bash
+./gradlew build
+```
+
+### Running in Development
+
+```bash
+./gradlew runClient
+```
+
+## Configuration
+
+The mod can be configured through the in-game configuration screen or by editing the config files.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
