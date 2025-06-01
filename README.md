@@ -41,4 +41,4 @@ The mod can be configured through the in-game configuration screen or by editing
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GPL3.0 License - see the LICENSE file for details.
