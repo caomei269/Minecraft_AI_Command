@@ -48,6 +48,10 @@ public class Config {
             .comment("AI service provider to use (DEEPSEEK or OPENAI)")
             .defineEnum("aiProvider", AIProvider.DEEPSEEK);
 
+    private static final ForgeConfigSpec.BooleanValue IS_FIRST_USE = BUILDER
+            .comment("Whether this is the first time using the mod")
+            .define("isFirstUse", true);
+
     public enum AIProvider {
         DEEPSEEK,
         OPENAI
@@ -62,6 +66,7 @@ public class Config {
     public static String deepSeekApiKey;
     public static String openAIApiKey;
     public static AIProvider aiProvider;
+    public static boolean isFirstUse;
 
     private static boolean validateItemName(final Object obj) {
         return obj instanceof final String itemName && ForgeRegistries.ITEMS.containsKey(ResourceLocation.tryParse(itemName));
@@ -75,6 +80,7 @@ public class Config {
         deepSeekApiKey = DEEPSEEK_API_KEY.get();
         openAIApiKey = OPENAI_API_KEY.get();
         aiProvider = AI_PROVIDER.get();
+        isFirstUse = IS_FIRST_USE.get();
 
         // convert the list of strings into a set of items
         items = ITEM_STRINGS.get().stream()

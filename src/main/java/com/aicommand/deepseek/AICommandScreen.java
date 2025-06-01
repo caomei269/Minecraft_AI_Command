@@ -187,9 +187,13 @@ public class AICommandScreen extends Screen {
         // 用户输入框 / User input box
         this.inputBox = new EditBox(this.font, PADDING, startY, this.width - PADDING * 2, EDITBOX_HEIGHT, Component.translatable("gui.aicommand.input"));
         this.inputBox.setMaxLength(500);
-        // 恢复之前保存的输入文本，如果没有则使用默认示例 / Restore previously saved input text, or use default example if none
+        // 恢复之前保存的输入文本，如果没有则根据是否首次使用决定显示内容 / Restore previously saved input text, or decide content based on first use
         if (savedInputText.isEmpty()) {
-            this.inputBox.setValue(Component.translatable("gui.aicommand.example_input").getString());
+            if (Config.isFirstUse) {
+                this.inputBox.setValue(Component.translatable("gui.aicommand.example_input").getString());
+            } else {
+                this.inputBox.setValue("");
+            }
         } else {
             this.inputBox.setValue(savedInputText);
         }
@@ -222,9 +226,9 @@ public class AICommandScreen extends Screen {
                 this.hasGeneratedCommands = false;
                 this.savedInputText = "";
                 this.executeButton.active = false;
-                // 重置输入框为默认示例文本 / Reset input box to default example text
+                // 清空输入框 / Clear input box
                 if (this.inputBox != null) {
-                    this.inputBox.setValue(Component.translatable("gui.aicommand.example_input").getString());
+                    this.inputBox.setValue("");
                 }
             }
         ).bounds(PADDING + 260, startY, 60, BUTTON_HEIGHT).build();
@@ -243,6 +247,21 @@ public class AICommandScreen extends Screen {
         if (userInput.isEmpty()) {
             this.outputLines.add(Component.translatable("gui.aicommand.enter_description").getString());
             return;
+        }
+        
+        // 如果是首次使用，标记为已使用 / If first use, mark as used
+        if (Config.isFirstUse) {
+            Config.isFirstUse = false;
+            // 更新配置文件 / Update config file
+            try {
+                java.lang.reflect.Field field = Config.class.getDeclaredField("IS_FIRST_USE");
+                field.setAccessible(true);
+                net.minecraftforge.common.ForgeConfigSpec.BooleanValue configValue = 
+                    (net.minecraftforge.common.ForgeConfigSpec.BooleanValue) field.get(null);
+                configValue.set(false);
+            } catch (Exception e) {
+                LOGGER.error("Failed to update first use flag", e);
+            }
         }
         
         // 检查API key是否配置 / Check if API key is configured
@@ -343,14 +362,14 @@ public class AICommandScreen extends Screen {
         // 渲染背景 / Render background
         this.renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         
-        // 渲染标题 / Render title
+        // 渲染标题 / Render title (使用整数坐标避免模糊 / Use integer coordinates to avoid blur)
         guiGraphics.drawCenteredString(this.font, this.title, this.width / 2, 15, 0xFFFFFF);
         
-        // 渲染输出区域 / Render output area
+        // 渲染输出区域 / Render output area (确保所有坐标为整数 / Ensure all coordinates are integers)
         int outputStartY = showConfig ? 200 : 140;
         int outputHeight = this.height - outputStartY - 20;
         
-        // 输出区域背景 / Output area background
+        // 输出区域背景 / Output area background (使用整数坐标 / Use integer coordinates)
         guiGraphics.fill(PADDING, outputStartY, this.width - PADDING, this.height - 20, 0x88000000);
         
         // 渲染输出文本 / Render output text
@@ -372,7 +391,8 @@ public class AICommandScreen extends Screen {
                 color = 0xFFFF55;
             }
             
-            guiGraphics.drawString(this.font, line, PADDING + 5, y, color);
+            // 使用整数坐标避免文字模糊 / Use integer coordinates to avoid text blur
+            guiGraphics.drawString(this.font, line, PADDING + 5, (int)y, color);
         }
         
         super.render(guiGraphics, mouseX, mouseY, partialTick);
