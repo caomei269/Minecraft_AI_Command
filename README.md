@@ -1,6 +1,6 @@
 # AI Command Mod
 
-A Minecraft Forge mod that integrates AI capabilities into the game.
+Have the AI generate Minecraft commands based on your description.
 
 ## Features
 
