@@ -6,7 +6,7 @@ Have the AI generate Minecraft commands based on your description.
 
 - AI-powered command interface
 - Integration with DeepSeek and OpenAI APIs
-- Custom keybindings for AI interactions
+- Custom keybindings for AI interactions(default: G key)
 - In-game AI command screen
 
 ## Requirements
