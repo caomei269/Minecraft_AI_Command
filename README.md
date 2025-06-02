@@ -9,17 +9,9 @@ Have the AI generate Minecraft commands based on your description.
 - Custom keybindings for AI interactions(default: G key)
 - In-game AI command screen
 
-## Requirements
-
-- Minecraft 1.21.5
-- Minecraft Forge 55.0.21+
-- Java 21
-
 ## Installation
 
-1. Download the latest release from the [releases page](https://www.curseforge.com/minecraft/mc-mods/ai-command)
-2. Place the .jar file in your Minecraft mods folder
-3. Launch Minecraft with Forge
+- Download the latest release from the [releases page](https://www.curseforge.com/minecraft/mc-mods/ai-command)
 
 ## Development
 
