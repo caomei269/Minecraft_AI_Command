@@ -17,7 +17,7 @@ Have the AI generate Minecraft commands based on your description.
 
 ## Installation
 
-1. Download the latest release from the releases page
+1. Download the latest release from the [releases page](https://www.curseforge.com/minecraft/mc-mods/ai-command)
 2. Place the .jar file in your Minecraft mods folder
 3. Launch Minecraft with Forge
 
