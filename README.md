@@ -7,7 +7,6 @@ Have the AI generate Minecraft commands based on your description.
 - Custom Keybind to Open GUI(Default: G Key)
 - Choose between DeepSeek and ChatGPT
 - Requires your personal API key
-- In-game AI command screen
 
 ## Installation
 
