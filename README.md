@@ -11,7 +11,7 @@ Have the AI generate Minecraft commands based on your description.
 
 ## Installation
 
-- Download the latest release from the [releases page](https://www.curseforge.com/minecraft/mc-mods/ai-command)
+- Download the release from the [releases page](https://www.curseforge.com/minecraft/mc-mods/ai-command)
 
 ## Development
 
