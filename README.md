@@ -37,7 +37,7 @@ Have the AI generate Minecraft commands based on your description.
 
 ## Configuration
 
-The mod can be configured through the in-game configuration screen or by editing the config files.
+The mod can be configured through the in-game configuration screen.
 
 ## License
 
