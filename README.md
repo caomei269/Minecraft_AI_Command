@@ -4,14 +4,14 @@ Have the AI generate Minecraft commands based on your description.
 
 ## Features
 
-- AI-powered command interface
-- Integration with DeepSeek and OpenAI APIs
-- Custom keybindings for AI interactions(default: G key)
+- Custom Keybind to Open GUI(Default: G Key)
+- Choose between DeepSeek and ChatGPT
+- Requires your personal API key
 - In-game AI command screen
 
 ## Installation
 
-- Download the release from the [releases page](https://www.curseforge.com/minecraft/mc-mods/ai-command)
+- Download the release from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ai-command)
 
 ## Development
 
@@ -26,6 +26,10 @@ Have the AI generate Minecraft commands based on your description.
 ```bash
 ./gradlew runClient
 ```
+###Built with:###
+・JDK 21
+・Forge 50.2.1
+Game Version: 1.21.5
 
 ## Configuration
 
