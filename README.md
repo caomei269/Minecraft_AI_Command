@@ -26,6 +26,7 @@ Have the AI generate Minecraft commands based on your description.
 ```bash
 ./gradlew runClient
 ```
+
 ###Built with:###
 ・JDK 21
 ・Forge 50.2.1
